@@ -19,6 +19,9 @@ body {
 	margin: 20px;
 	padding: 20px;
 }
+.logo{
+	max-width: 300px;
+}
 
 .pokemon {
 	background-color: rgb(255, 255, 255);
@@ -63,11 +66,34 @@ body {
 
 @media (max-width:900px){
 	.container{
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	.pokemon{
+		max-width: 200px;
+	}
+	.logo{
+		max-width: 300px;
 	}
 }
 @media (max-width:700px){
 	.container{
+		grid-template-columns: 1fr 1fr;
+	}
+	.pokemon{
+		max-width: 200px;
+	}
+	.logo{
+		max-width: 250px;
+	}
+}
+@media (max-width:500px){
+	.container{
 		grid-template-columns: 1fr;
+	}
+	.pokemon{
+		max-width: 170px;
+	}
+	.logo{
+		max-width: 170px;
 	}
 }
