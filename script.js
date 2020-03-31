@@ -1,4 +1,6 @@
 const container = document.getElementById("container");
+const observer = window.lozad();
+observer.observe();
 
 
 const getPokemons = async ()  => {
@@ -7,12 +9,15 @@ const getPokemons = async ()  => {
         const data = await fetch(url);
         const pokemon =  await data.json();
         createPokemonView(pokemon);
+        observer.observe();
+
     }
 }
 
 const createPokemonView = (pokemon) => {
     const pokemonElement = document.createElement('div');
-    pokemonElement.classList.add('pokemon')
+    pokemonElement.classList.add('lozad');
+    pokemonElement.classList.add('pokemon');
     
     const name = pokemon.name;
     const types = pokemon.types.map(type => type.type.name);
@@ -21,7 +26,7 @@ const createPokemonView = (pokemon) => {
 
     const pokeInnerHTML = `
         <div class="img-container">
-            <img src="https://pokeres.bastionbot.org/images/pokemon/${
+            <img class="lozad" data-src="https://pokeres.bastionbot.org/images/pokemon/${
 							pokemon.id
 						}.png" alt="${name}" />
         </div>
