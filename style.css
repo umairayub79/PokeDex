@@ -24,12 +24,13 @@ body {
 }
 
 .pokemon {
-	background-color: rgb(255, 255, 255);
+	background-color: #ffcd00;
 	border-radius: 20px;
 	box-shadow: 5px 5px 5px rgba(100, 100, 100, 1);
 	margin: 10px;
 	padding: 20px;
     text-align: center;
+    color:#356abc;
 	max-width: 250px;
 }
 
