@@ -91,7 +91,7 @@ body {
 		grid-template-columns: 1fr;
 	}
 	.pokemon{
-		max-width: 170px;
+		max-width: 200px;
 	}
 	.logo{
 		max-width: 170px;
